@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class HomeProvider extends ChangeNotifier {
   int i = 0;
-  int phind = 0;
+  int Photoindex = 0;
 
   void selectIndex(int value) {
     i = value;
@@ -10,7 +10,7 @@ class HomeProvider extends ChangeNotifier {
   }
 
   void changeValue(int value) {
-    phind = value;
+    Photoindex = value;
     notifyListeners();
   }
 
@@ -35,6 +35,7 @@ class HomeProvider extends ChangeNotifier {
     "assets/images/surya.jpg",
     "assets/images/tripathi.jpg",
     "assets/images/uv.jpg",
+    "assets/images/kholi.jpg",
   ];
   List videoImage = [
     "assets/videophoto/2.jpg",
@@ -50,6 +51,8 @@ class HomeProvider extends ChangeNotifier {
     "assets/videophoto/13.jpg",
     "assets/videophoto/14.jpg",
     "assets/videophoto/15.jpg",
-    "assets/videophoto/3.jpg",
+    "assets/videophoto/4.jpg",
+    "assets/videophoto/5.jpg",
+    "assets/videophoto/7.jpg",
   ];
 }

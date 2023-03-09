@@ -31,230 +31,227 @@ class _Profile_ScreenState extends State<Profile_Screen> {
             ),
           ],
         ),
-        body: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
+        body: SingleChildScrollView(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
 
-          children: [
-            SizedBox(
-              height: 18,
-            ),
-            Center(
-              child: CircleAvatar(
-                radius: 70,
-                backgroundImage: AssetImage("assets/images/krishna.jpg"),
+            children: [
+              SizedBox(
+                height: 18,
               ),
-            ),
-            Text(
-              'krishna',
-              style: TextStyle(
-                fontSize: 40.0,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'Pacifico',
+              Center(
+                child: CircleAvatar(
+                  radius: 70,
+                  backgroundImage: AssetImage("assets/images/krishna.jpg"),
+                ),
               ),
-            ),
-            Text(
-              'GOD',
-              style: TextStyle(
-                  fontSize: 30.0,
-                  color: Colors.blueGrey.shade500,
-                  letterSpacing: 2.5,
+              Text(
+                'krishna',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'Source Sans Pro'),
-            ),
-            SizedBox(
-              height: 20,
-              width: 200,
-              child: Divider(
-                color: Colors.white,
+                  fontFamily: 'Pacifico',
+                ),
               ),
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.security_update_good_sharp,
-                      color: Colors.red.shade100,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "78610*****",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      width: 120,
-                    ),
-                  ),
-                  Icon(
-                    Icons.edit,
-                    color: Color(0xff8F8F8F),
-                  )
-                ],
+              Text(
+                'GOD',
+                style: TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.blueGrey.shade500,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Source Sans Pro'),
               ),
-            ),
-            Divider(
-              color: Colors.grey.shade200,
-              thickness: 10,
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.account_box_outlined,
-                      color: Colors.deepPurpleAccent.shade100,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Manage Account",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      width: 120,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-
-                ],
+              SizedBox(
+                height: 20,
+                width: 200,
+                child: Divider(
+                  color: Colors.white,
+                ),
               ),
-            ),
-
-            Container(
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.add,
-                      color: Colors.blue.shade200,
+              Container(
+                height: 40,
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Icon(
+                        Icons.security_update_good_sharp,
+                        color: Colors.red.shade100,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Add personal account",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      width: 120,
+                    SizedBox(
+                      width: 20,
                     ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-
-                ],
+                    Text(
+                      "78610*****",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        width: 120,
+                      ),
+                    ),
+                    Icon(
+                      Icons.edit,
+                      color: Color(0xff8F8F8F),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Divider(
-              color: Color(0xff8F8F8F),
-              thickness: 0.3,
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.more_horiz,
-                      color: Colors.lightBlueAccent.shade100,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "More",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      width: 120,
-                    ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Color(0xff8F8F8F),
-                  )
-                ],
+              Divider(
+                color: Colors.grey.shade200,
+                thickness: 10,
               ),
-            ),Divider(
-              color: Color(0xff8F8F8F),
-              thickness: 0.3,
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5),
-                    child: Icon(
-                      Icons.save,
-                      color: Colors.lightBlueAccent.shade100,
+              Container(
+                height: 40,
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Icon(
+                        Icons.account_box_outlined,
+                        color: Colors.deepPurpleAccent.shade100,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Text(
-                    "Save",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Expanded(
-                    child: SizedBox(
-                      width: 120,
+                    SizedBox(
+                      width: 20,
                     ),
-                  ),
-
-                ],
+                    Text(
+                      "Manage Account",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        width: 120,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              child: Row(
-                children: [
-
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10,left: 30),
-                    child: Text(
-                      "Sign out",
-                      style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+              Container(
+                height: 40,
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Icon(
+                        Icons.add,
+                        color: Colors.blue.shade200,
+                      ),
                     ),
-                  ),
-
-
-                ],
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Add personal account",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        width: 120,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+              Divider(
+                color: Color(0xff8F8F8F),
+                thickness: 0.3,
+              ),
+              Container(
+                height: 40,
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Icon(
+                        Icons.more_horiz,
+                        color: Colors.lightBlueAccent.shade100,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "More",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        width: 120,
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_forward_ios,
+                      color: Color(0xff8F8F8F),
+                    )
+                  ],
+                ),
+              ),
+              Divider(
+                color: Color(0xff8F8F8F),
+                thickness: 0.3,
+              ),
+              Container(
+                height: 40,
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(5),
+                      child: Icon(
+                        Icons.save,
+                        color: Colors.lightBlueAccent.shade100,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Text(
+                      "Save",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        width: 120,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                height: 40,
+                width: double.infinity,
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10, left: 30),
+                      child: Text(
+                        "Sign out",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

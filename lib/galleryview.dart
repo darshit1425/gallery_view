@@ -19,10 +19,15 @@ class _Gallery1State extends State<Gallery1> {
     providerT = Provider.of<HomeProvider>(context, listen: true);
     providerF = Provider.of<HomeProvider>(context, listen: false);
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.blueGrey,),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+      ),
       body: PageView.builder(
         // controller: PageController
         itemCount: providerT!.Image.length,
+        controller: PageController(
+          initialPage: providerT!.Photoindex,
+        ),
 
         scrollDirection: Axis.horizontal,
         onPageChanged: (value) {
@@ -33,7 +38,8 @@ class _Gallery1State extends State<Gallery1> {
             height: 120,
             width: 120,
             child: Image.asset(
-              providerT!.Image[providerT!.Image[index]],fit: BoxFit.cover,
+              "${providerT!.Image[providerT!.Photoindex]}",
+              fit: BoxFit.cover,
             ),
           );
         },
@@ -41,3 +47,5 @@ class _Gallery1State extends State<Gallery1> {
     );
   }
 }
+
+

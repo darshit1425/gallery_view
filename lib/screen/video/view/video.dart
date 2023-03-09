@@ -23,6 +23,7 @@ class _Video_ScreenState extends State<Video_Screen> {
       child: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
+          title: Text("Videos",style: TextStyle(fontSize: 50),),
           backgroundColor: Colors.black,
           actions: [
             Icon(
@@ -41,25 +42,11 @@ class _Video_ScreenState extends State<Video_Screen> {
             ),
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SingleChildScrollView(
-            child: SingleChildScrollView(
-
-              child: Column(
+        body:
+              Stack(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Align(
-                      alignment: Alignment.bottomLeft,
-                      child: Text(
-                        "Videos",
-                        style: TextStyle(color: Colors.white, fontSize: 40),
-                      ),
-                    ),
-                  ),
+                  SizedBox(height: 40,),
                   ListView.builder(
-
                     itemCount: providerT!.videoImage.length,
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
@@ -94,35 +81,37 @@ class _Video_ScreenState extends State<Video_Screen> {
                         ),
                       );
                     },
-                  )
-
-                  // ListTile(
-                  //   leading: Container(
-                  //     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-                  //     height: 100,
-                  //      width: 100,
-                  //
-                  //      child: Image.asset(""),
-                  //   ),
-                  //   trailing: Text(
-                  //     "8.10 PM",
-                  //     style: TextStyle(color: Colors.white),
-                  //   ),
-                  //   subtitle: Text(
-                  //     "Hello good moring ?",
-                  //     style: TextStyle(color: Colors.white),
-                  //   ),
-                  //   title: Text(
-                  //     "Darshit",
-                  //     style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
-                  //   ),
+                  ),
+                  SizedBox(height: 100,),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(right: 100,left: 40),
+                  //   child: Text("Videos",style: TextStyle(color: Colors.amber,fontSize: 50),),
                   // ),
                 ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
+              )
+
+              // ListTile(
+              //   leading: Container(
+              //     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+              //     height: 100,
+              //      width: 100,
+              //
+              //      child: Image.asset(""),
+              //   ),
+              //   trailing: Text(
+              //     "8.10 PM",
+              //     style: TextStyle(color: Colors.white),
+              //   ),
+              //   subtitle: Text(
+              //     "Hello good moring ?",
+              //     style: TextStyle(color: Colors.white),
+              //   ),
+              //   title: Text(
+              //     "Darshit",
+              //     style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),
+              //   ),
+              // ),
+          )
+        );
   }
 }

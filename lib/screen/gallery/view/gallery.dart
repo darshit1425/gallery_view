@@ -21,7 +21,7 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
     providerF = Provider.of<HomeProvider>(context, listen: false);
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Colors.black,
           centerTitle: true,
@@ -40,7 +40,7 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
               crossAxisCount: 3, mainAxisSpacing: 8, crossAxisSpacing: 10),
           itemCount: providerT!.Image.length,
           itemBuilder: (context, index) {
-            return Myphotos(providerT!.Image[index],index);
+            return Myphotos(providerT!.Image[index], index);
             //
             //
             //
@@ -55,16 +55,22 @@ class _Gallery_ScreenState extends State<Gallery_Screen> {
     );
   }
 
-  Widget Myphotos(String? image,int index) {
-    return InkWell(onTap: (){
-      providerT!.Image[index];
-      Navigator.pushNamed(context, "Gallery1");
-    },
+  Widget Myphotos(String? image, int index) {
+    return InkWell(
+      onTap: () {
+        providerT!.changeValue(index);
+        Navigator.pushNamed(
+          context,
+          "Gallery1",
+        );
+      },
       child: Container(
         height: 100,
         width: 100,
         decoration: BoxDecoration(
-          color: Colors.blueGrey, borderRadius: BorderRadius.circular(15),),
+          color: Colors.blueGrey,
+          borderRadius: BorderRadius.circular(15),
+        ),
         child: Image.asset(
           "${image}",
           fit: BoxFit.fill,
